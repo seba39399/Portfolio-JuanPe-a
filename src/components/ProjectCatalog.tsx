@@ -75,7 +75,7 @@ export function ProjectCatalog() {
 
               <div className="mb-4 bg-slate-950 p-3 rounded-lg border border-slate-800/50">
                 <p className="text-[11px] font-semibold text-slate-300 mb-1">
-                  🎯 Resultados & Impacto:
+                  🎯 Results and impact:
                 </p>
                 <ul className="list-disc list-inside text-[11px] text-slate-400 space-y-1">
                   {project.metrics.map((m, i) => (
