@@ -9,7 +9,10 @@ export interface Project {
     | "Computer Vision";
   tags: string[];
   metrics: string[];
-  demoType: "iframe" | "video" | "interactive";
+  demoType: "iframe" | "video" | "interactive" | "image";
   demoUrl?: string;
+  imageUrl?: string;
+  demoImages?: string[];
+  demoDescription?: string;
   githubUrl: string;
 }

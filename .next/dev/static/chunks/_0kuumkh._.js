@@ -510,11 +510,16 @@ const projectsData = [
         category: "Full-Stack & SQL",
         tags: [
             "Python",
-            "SQL",
+            "PostgreSQL",
             "React (JS)",
             "Pandas",
             "NumPy",
-            "Cloud Migration"
+            "Cloud Migration",
+            "FastAPI",
+            "AWS S3",
+            "AWS CDN",
+            "AWS Fargate",
+            "AWS CloudWatch"
         ],
         metrics: [
             "100% digitization of implant cards",
@@ -535,15 +540,22 @@ const projectsData = [
             "ViTPose+",
             "Streamlit",
             "OpenCV",
-            "PyTorch"
+            "PyTorch",
+            "gRPC"
         ],
         metrics: [
             "Real-time processing",
             "Decoupled modularization for easy integration",
             "Generation of advanced reports in PDF format about patients"
         ],
-        demoType: "iframe",
-        demoUrl: "https://streamlit.io",
+        demoType: "image",
+        demoUrl: "/images/interfaz1.jpg",
+        imageUrl: "/images/interfaz1.jpg",
+        demoImages: [
+            "/images/interfaz1.jpg",
+            "/images/interfaz2.jpg"
+        ],
+        demoDescription: "Interfaz en Streamlit para procesamiento de video en tiempo real. Permite la carga de videos biomecánicos, seguimiento del esqueleto mediante ViTPose+ y extracción automática de métricas de rehabilitación.",
         githubUrl: "https://github.com/miguelfrancor01/App_PhysicalRecovery"
     },
     {
@@ -555,8 +567,8 @@ const projectsData = [
             "PySpark",
             "Apache Airflow",
             "AWS S3",
-            "Glue",
-            "Athena",
+            "AWS Glue",
+            "AWS Athena",
             "SQL"
         ],
         metrics: [
@@ -626,8 +638,7 @@ const projectsData = [
             "KNN Neighbors model used for training purposes",
             "Made it possible to distinguish between three types of tissue (normal, benign, and malignant)"
         ],
-        demoType: "video",
-        demoUrl: "https://www.loom.com/embed/04250c05b8884e3ba5cf3213829333a7",
+        demoType: "interactive",
         githubUrl: "https://github.com/seba39399/Medical-Image-Analysis-with-AI-Mammography"
     },
     {
@@ -649,7 +660,7 @@ const projectsData = [
             "Dental practice using traditional computer vision"
         ],
         demoType: "video",
-        demoUrl: "https://www.loom.com/embed/04250c05b8884e3ba5cf3213829333a7",
+        demoUrl: "https://www.loom.com/embed/cf3704506b6641ca8289a6465f9c69ac",
         githubUrl: "https://github.com/seba39399/Cephalometric-Landmark-Detection-Image-Processing/tree/main"
     }
 ];

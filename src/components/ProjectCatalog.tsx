@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { projectsData, Project } from "@/data/projects";
+import { DemoModal } from "./DemoModal"; // 👈 Importamos el DemoModal completo
 
 export function ProjectCatalog() {
   const [selectedTag, setSelectedTag] = useState<string>("All");
@@ -57,91 +58,79 @@ export function ProjectCatalog() {
 
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredProjects.map((project) => (
-          <div
-            key={project.id}
-            className="bg-slate-900 border border-slate-800/80 rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/40 transition"
-          >
-            <div>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-blue-400 bg-blue-950/60 px-2.5 py-1 rounded-md border border-blue-900/50">
-                {project.category}
-              </span>
-              <h3 className="text-lg font-bold text-white mt-3 mb-2">
-                {project.title}
-              </h3>
-              <p className="text-slate-400 text-xs mb-4 leading-relaxed">
-                {project.shortDescription}
-              </p>
+        {filteredProjects.map((project) => {
+          // Verificamos si el proyecto tiene algún tipo de demo disponible
+          const hasDemo =
+            Boolean(project.demoUrl) ||
+            Boolean(project.imageUrl) ||
+            Boolean(project.demoImages && project.demoImages.length > 0);
 
-              <div className="mb-4 bg-slate-950 p-3 rounded-lg border border-slate-800/50">
-                <p className="text-[11px] font-semibold text-slate-300 mb-1">
-                  🎯 Results and impact:
+          return (
+            <div
+              key={project.id}
+              className="bg-slate-900 border border-slate-800/80 rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/40 transition"
+            >
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-blue-400 bg-blue-950/60 px-2.5 py-1 rounded-md border border-blue-900/50">
+                  {project.category}
+                </span>
+                <h3 className="text-lg font-bold text-white mt-3 mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-slate-400 text-xs mb-4 leading-relaxed">
+                  {project.shortDescription}
                 </p>
-                <ul className="list-disc list-inside text-[11px] text-slate-400 space-y-1">
-                  {project.metrics.map((m, i) => (
-                    <li key={i}>{m}</li>
+
+                <div className="mb-4 bg-slate-950 p-3 rounded-lg border border-slate-800/50">
+                  <p className="text-[11px] font-semibold text-slate-300 mb-1">
+                    🎯 Results and impact:
+                  </p>
+                  <ul className="list-disc list-inside text-[11px] text-slate-400 space-y-1">
+                    {project.metrics.map((m, i) => (
+                      <li key={i}>{m}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex flex-wrap gap-1.5 mb-6">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded"
+                    >
+                      {tag}
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
 
-              <div className="flex flex-wrap gap-1.5 mb-6">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex gap-2 pt-4 border-t border-slate-800/80">
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                className="flex-1 text-center py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg text-xs font-semibold transition"
-              >
-                Code (GitHub)
-              </a>
-              {project.demoUrl && (
-                <button
-                  onClick={() => setActiveModalProject(project)}
-                  className="flex-1 text-center py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-semibold transition"
+              <div className="flex gap-2 pt-4 border-t border-slate-800/80">
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  className="flex-1 text-center py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg text-xs font-semibold transition"
                 >
-                  See demo 🚀
-                </button>
-              )}
+                  Code (GitHub)
+                </a>
+                {hasDemo && (
+                  <button
+                    onClick={() => setActiveModalProject(project)}
+                    className="flex-1 text-center py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-semibold transition cursor-pointer"
+                  >
+                    See demo 🚀
+                  </button>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
-      {/* Interactivity Model of Data */}
-      {activeModalProject && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-4xl overflow-hidden shadow-2xl">
-            <div className="p-4 border-b border-slate-800 flex justify-between items-center bg-slate-950">
-              <h3 className="text-sm font-bold text-white">
-                {activeModalProject.title} — Demo
-              </h3>
-              <button
-                onClick={() => setActiveModalProject(null)}
-                className="text-slate-400 hover:text-white bg-slate-800 px-3 py-1 rounded-lg text-xs"
-              >
-                ✕ Close
-              </button>
-            </div>
-            <div className="h-[480px] bg-black">
-              <iframe
-                src={activeModalProject.demoUrl}
-                className="w-full h-full border-0"
-                title={activeModalProject.title}
-              />
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Modal para Demos (Soporta Videos, iFrames e Imágenes) */}
+      <DemoModal
+        project={activeModalProject}
+        onClose={() => setActiveModalProject(null)}
+      />
     </section>
   );
 }
