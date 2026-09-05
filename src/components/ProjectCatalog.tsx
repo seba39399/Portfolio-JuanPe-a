@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { projectsData, Project } from "@/data/projects";
-import { DemoModal } from "./DemoModal"; // 👈 Importamos el DemoModal completo
+import { projectsData } from "@/data/projects";
+import { Project } from "@/types/project";
+import { DemoModal } from "./DemoModal";
 
 export function ProjectCatalog() {
   const [selectedTag, setSelectedTag] = useState<string>("All");
