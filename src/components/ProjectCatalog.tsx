@@ -24,7 +24,10 @@ export function ProjectCatalog() {
   return (
     <section className="py-16 max-w-6xl mx-auto px-6">
       {/* Paragraph & Header Container */}
-      <div className="text-center mb-12">
+      <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-blue-400 bg-blue-950/60 px-3.5 py-1 rounded-full border border-blue-900/50 inline-block">
+          // TRACK RECORD & PORTFOLIO
+        </span>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-6">
           Project Portfolio & Case Studies
         </h2>

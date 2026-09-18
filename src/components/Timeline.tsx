@@ -11,7 +11,7 @@ interface ExperienceItem {
 const timelineData: ExperienceItem[] = [
   {
     period: "2025 - 2026",
-    role: "Postgraduate Specialization in Artificial Intelligence",
+    role: "Specialization in Artificial Intelligence | Postgraduate Degree",
     organization: "Universidad Autónoma de Occidente",
     description:
       "Advanced certification focused on machine learning and deep learning architectures, computer vision models, and production MLOps workflows. Core expertise includes deploying advanced algorithms, designing neural networks, and optimizing intelligent systems for real-world data processing applications.",
@@ -24,7 +24,7 @@ const timelineData: ExperienceItem[] = [
   },
   {
     period: "2023",
-    role: "Research Internship in IoT & AI for Healthcare",
+    role: "IoT & AI for Healthcare | Research Internship",
     organization: "Universidad de Guadalajara",
     description:
       "Designed and developed an Internet of Things (IoT) edge algorithm for real-time continuous monitoring of physiological variables under international scientific consultancy. embedded systems data pipeline efficiency, sensor integration, and secure data transmission protocols for critical healthcare applications.",
@@ -52,9 +52,12 @@ const timelineData: ExperienceItem[] = [
 
 export function Timeline() {
   return (
-    <section className="py-16 max-w-4xl mx-auto px-6">
+    <section id="timeline" className="py-16 max-w-4xl mx-auto px-6">
       {/* Encabezado con espaciado corregido */}
-      <div className="text-center mb-12">
+      <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-blue-400 bg-blue-950/60 px-3.5 py-1 rounded-full border border-blue-900/50 inline-block">
+          // ACADEMIC HISTORY
+        </span>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
           Education & Background
         </h2>

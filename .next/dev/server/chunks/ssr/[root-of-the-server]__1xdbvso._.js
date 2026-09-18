@@ -46,24 +46,55 @@ var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$i
 ;
 ;
 const metadata = {
-    title: "Portafolio | Data & AI Engineer",
-    description: "Portafolio interactivo de proyectos de Ingeniería de Datos, MLOps e IA"
+    title: "Juan Sebastián Peña | Data & AI Specialist",
+    description: "Portafolio profesional especializado en Arquitectura de Datos, pipelines ETL distribuidos (AWS / PySpark / Airflow) e integración de soluciones de IA en producción.",
+    keywords: [
+        "Data Engineer",
+        "MLOps",
+        "AI Specialist",
+        "PySpark",
+        "AWS",
+        "Biomedical Engineer",
+        "Computer Vision"
+    ],
+    authors: [
+        {
+            name: "Juan Sebastián Peña"
+        }
+    ],
+    //
+    icons: {
+        icon: "/favicon.ico",
+        shortcut: "/favicon.ico",
+        apple: "/favicon.ico"
+    },
+    openGraph: {
+        title: "Juan Sebastián Peña | Data & AI Specialist",
+        description: "Especialista en arquitectura de datos, pipelines de ETL distribuidos y despliegue de modelos de IA en producción.",
+        type: "website",
+        locale: "es_CO"
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Juan Sebastián Peña | Data & AI Specialist",
+        description: "Especialista en arquitectura de datos, pipelines de ETL distribuidos y despliegue de modelos de IA en producción."
+    }
 };
 function RootLayout({ children }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("html", {
         lang: "es",
-        className: "dark",
+        className: "dark scroll-smooth",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
-            className: `${__TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$inter_5972bc34$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].className} bg-slate-950 text-slate-100 antialiased min-h-screen`,
+            className: `${__TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$inter_5972bc34$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].className} bg-slate-950 text-slate-100 antialiased min-h-screen selection:bg-blue-500 selection:text-white`,
             children: children
         }, void 0, false, {
             fileName: "[project]/src/app/layout.tsx",
-            lineNumber: 19,
+            lineNumber: 51,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/layout.tsx",
-        lineNumber: 18,
+        lineNumber: 50,
         columnNumber: 5
     }, this);
 }

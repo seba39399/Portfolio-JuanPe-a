@@ -103,10 +103,10 @@ const experiences: Experience[] = [
   {
     id: "exp-4",
     role: "Research Assistant",
-    organization: "Semillero FELISIA",
+    organization: "Universidad Autónoma de Occidente",
     type: "Academic",
     period: "2023 - 2024",
-    location: "Universidad Autónoma de Occidente",
+    location: "Cali, Colombia",
     summary:
       "Development of computational algorithms for the digital processing of medical images in a radiological context—working with X-rays or computed tomography scans—to improve workflows in dental practices, general dentistry, and orthodontic procedures. Application of advanced computer vision utilizing machine learning, deep learning, and both manual and automated mathematical methods.",
     keyDeliverables: [
@@ -162,7 +162,7 @@ export function ExperienceMatrix() {
   const [selectedExp, setSelectedExp] = useState<Experience>(experiences[0]);
 
   return (
-    <section className="py-20 max-w-6xl mx-auto px-6">
+    <section id="experience" className="py-20 max-w-6xl mx-auto px-6">
       {/* Encabezado de la sección */}
       <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
         <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-blue-400 bg-blue-950/60 px-3.5 py-1 rounded-full border border-blue-900/50 inline-block">

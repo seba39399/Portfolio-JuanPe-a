@@ -6,23 +6,42 @@ export function ContactSection() {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(false);
 
-    // Simulación de envío
-    setTimeout(() => {
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      //
+      const response = await fetch("https://formspree.io/f/moevvrzy", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setMessage("");
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
       setIsSubmitting(false);
-      setSubmitted(true);
-      setMessage("");
-    }, 1000);
+    }
   };
 
   return (
     <section id="contact" className="py-20 max-w-6xl mx-auto px-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        {/* Columna Izquierda: Mensaje focalizado en servicios/consultoría */}
+        {/* Columna Izquierda */}
         <div className="space-y-5 text-left">
           <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-blue-400 bg-blue-950/60 px-3 py-1 rounded-full border border-blue-900/50 inline-block">
             Get in Touch
@@ -37,7 +56,7 @@ export function ContactSection() {
           </p>
         </div>
 
-        {/* Columna Derecha: Tarjeta con estética slate/blue */}
+        {/* Columna Derecha */}
         <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-sm">
           {submitted ? (
             <div className="py-12 text-center space-y-3">
@@ -118,13 +137,19 @@ export function ContactSection() {
                 </div>
               </div>
 
-              {/* Botón Send Proposal */}
+              {error && (
+                <p className="text-xs text-rose-500 text-center">
+                  Something went wrong. Please try again.
+                </p>
+              )}
+
+              {/* Botón Submit */}
               <button
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full py-3.5 px-6 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs transition duration-200 cursor-pointer shadow-lg shadow-blue-600/20 disabled:opacity-50"
               >
-                {isSubmitting ? "Processing..." : "Submit Inquiry 🚀"}
+                {isSubmitting ? "Sending..." : "Submit Inquiry 🚀"}
               </button>
             </form>
           )}
