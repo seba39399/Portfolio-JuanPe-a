@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Project } from "@/types/project";
 
 interface DemoModalProps {
@@ -87,9 +88,11 @@ export function DemoModal({ project, onClose }: DemoModalProps) {
                     key={idx}
                     className="relative rounded-xl overflow-hidden border border-gray-800 bg-gray-950 p-2 shadow-xl"
                   >
-                    <img
+                    <Image
                       src={img}
                       alt={`Preview ${idx + 1} - ${project.title}`}
+                      width={1200}
+                      height={675}
                       className="w-full h-auto object-contain rounded-lg"
                     />
                   </div>
