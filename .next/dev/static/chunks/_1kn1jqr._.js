@@ -659,7 +659,7 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$projects$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/projects.ts [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$DemoModal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/DemoModal.tsx [app-client] (ecmascript)"); // 👈 Importamos el DemoModal completo
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$DemoModal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/DemoModal.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
@@ -686,7 +686,7 @@ function ProjectCatalog() {
                         children: "Project Portfolio & Case Studies"
                     }, void 0, false, {
                         fileName: "[project]/src/components/ProjectCatalog.tsx",
-                        lineNumber: 27,
+                        lineNumber: 28,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -694,13 +694,13 @@ function ProjectCatalog() {
                         children: "Data Science and Artificial Intelligence (AI) Specialist with over 2 years of experience developing production-ready software solutions in ecosystems such as AWS and Azure. Expert in machine learning models, deep learning, computer vision algorithms, natural language processing (NLP), RAG systems, and LLM models, with experience developing ETL algorithms using orchestrators such as Apache Airflow and applying data processing tools such as Apache Spark (PySpark). Contact me for more information about my services."
                     }, void 0, false, {
                         fileName: "[project]/src/components/ProjectCatalog.tsx",
-                        lineNumber: 30,
+                        lineNumber: 31,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ProjectCatalog.tsx",
-                lineNumber: 26,
+                lineNumber: 27,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -714,12 +714,12 @@ function ProjectCatalog() {
                         ]
                     }, tag, true, {
                         fileName: "[project]/src/components/ProjectCatalog.tsx",
-                        lineNumber: 45,
+                        lineNumber: 46,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/ProjectCatalog.tsx",
-                lineNumber: 43,
+                lineNumber: 44,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -737,7 +737,7 @@ function ProjectCatalog() {
                                         children: project.category
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ProjectCatalog.tsx",
-                                        lineNumber: 74,
+                                        lineNumber: 75,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -745,7 +745,7 @@ function ProjectCatalog() {
                                         children: project.title
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ProjectCatalog.tsx",
-                                        lineNumber: 77,
+                                        lineNumber: 78,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -753,7 +753,7 @@ function ProjectCatalog() {
                                         children: project.shortDescription
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ProjectCatalog.tsx",
-                                        lineNumber: 80,
+                                        lineNumber: 81,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -764,7 +764,7 @@ function ProjectCatalog() {
                                                 children: "🎯 Results and impact:"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ProjectCatalog.tsx",
-                                                lineNumber: 85,
+                                                lineNumber: 86,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -773,18 +773,18 @@ function ProjectCatalog() {
                                                         children: m
                                                     }, i, false, {
                                                         fileName: "[project]/src/components/ProjectCatalog.tsx",
-                                                        lineNumber: 90,
+                                                        lineNumber: 91,
                                                         columnNumber: 23
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/ProjectCatalog.tsx",
-                                                lineNumber: 88,
+                                                lineNumber: 89,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/ProjectCatalog.tsx",
-                                        lineNumber: 84,
+                                        lineNumber: 85,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -794,18 +794,18 @@ function ProjectCatalog() {
                                                 children: tag
                                             }, tag, false, {
                                                 fileName: "[project]/src/components/ProjectCatalog.tsx",
-                                                lineNumber: 97,
+                                                lineNumber: 98,
                                                 columnNumber: 21
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ProjectCatalog.tsx",
-                                        lineNumber: 95,
+                                        lineNumber: 96,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ProjectCatalog.tsx",
-                                lineNumber: 73,
+                                lineNumber: 74,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -818,7 +818,7 @@ function ProjectCatalog() {
                                         children: "Code (GitHub)"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ProjectCatalog.tsx",
-                                        lineNumber: 108,
+                                        lineNumber: 109,
                                         columnNumber: 17
                                     }, this),
                                     hasDemo && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -827,25 +827,25 @@ function ProjectCatalog() {
                                         children: "See demo 🚀"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ProjectCatalog.tsx",
-                                        lineNumber: 116,
+                                        lineNumber: 117,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ProjectCatalog.tsx",
-                                lineNumber: 107,
+                                lineNumber: 108,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, project.id, true, {
                         fileName: "[project]/src/components/ProjectCatalog.tsx",
-                        lineNumber: 69,
+                        lineNumber: 70,
                         columnNumber: 13
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "[project]/src/components/ProjectCatalog.tsx",
-                lineNumber: 60,
+                lineNumber: 61,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$DemoModal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DemoModal"], {
@@ -853,13 +853,13 @@ function ProjectCatalog() {
                 onClose: ()=>setActiveModalProject(null)
             }, void 0, false, {
                 fileName: "[project]/src/components/ProjectCatalog.tsx",
-                lineNumber: 130,
+                lineNumber: 131,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/ProjectCatalog.tsx",
-        lineNumber: 24,
+        lineNumber: 25,
         columnNumber: 5
     }, this);
 }
@@ -904,7 +904,7 @@ const projectsData = [
             "Cloud-based architecture for scalability and security"
         ],
         demoType: "video",
-        demoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        demoUrl: "https://www.loom.com/embed/804ca6916a174ccd8f511eafc3161b80",
         demoDescription: "An end-to-end relational database architecture designed to track medical devices and high-risk human implants throughout their clinical lifecycle. Built around a MySQL relational schema, the system processes REST API payloads via a Flask backend to validate Device Identifier (DI) and Production Identifier (PI) standards. It manages relational integrity across inventory modules, surgical procedures, and patient usage logs, optimizing query performance for regulatory auditability and compliance with healthcare tracking standards.",
         githubUrl: "https://github.com/seba39399/DMI-Database-AI"
     },

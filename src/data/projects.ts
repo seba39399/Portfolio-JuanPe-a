@@ -27,7 +27,7 @@ export const projectsData: Project[] = [
       "Cloud-based architecture for scalability and security",
     ],
     demoType: "video",
-    demoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    demoUrl: "https://www.loom.com/embed/804ca6916a174ccd8f511eafc3161b80",
     demoDescription:
       "An end-to-end relational database architecture designed to track medical devices and high-risk human implants throughout their clinical lifecycle. Built around a MySQL relational schema, the system processes REST API payloads via a Flask backend to validate Device Identifier (DI) and Production Identifier (PI) standards. It manages relational integrity across inventory modules, surgical procedures, and patient usage logs, optimizing query performance for regulatory auditability and compliance with healthcare tracking standards.",
     githubUrl: "https://github.com/seba39399/DMI-Database-AI",

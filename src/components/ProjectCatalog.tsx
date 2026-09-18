@@ -22,13 +22,13 @@ export function ProjectCatalog() {
       : projectsData.filter((p) => p.tags.includes(selectedTag));
 
   return (
-    <section className="py-12 max-w-6xl mx-auto px-6">
-      {/* Paragraph */}
-      <div className="text-center mb-8">
-        <h2 className="text-2xl font-bold text-white mb-2">
+    <section className="py-16 max-w-6xl mx-auto px-6">
+      {/* Paragraph & Header Container */}
+      <div className="text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-6">
           Project Portfolio & Case Studies
         </h2>
-        <p className="text-slate-400 text-sm max-w-2xl mx-auto">
+        <p className="text-slate-400 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed mt-4">
           Data Science and Artificial Intelligence (AI) Specialist with over 2
           years of experience developing production-ready software solutions in
           ecosystems such as AWS and Azure. Expert in machine learning models,
