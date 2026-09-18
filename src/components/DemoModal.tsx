@@ -17,8 +17,6 @@ export function DemoModal({ project, onClose }: DemoModalProps) {
         ? [project.imageUrl]
         : [];
 
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
   return (
     <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-2 sm:p-6">
       <div className="bg-gray-900 border border-gray-800 rounded-2xl w-full max-w-7xl overflow-hidden shadow-2xl flex flex-col max-h-[95vh]">
@@ -64,7 +62,7 @@ export function DemoModal({ project, onClose }: DemoModalProps) {
             </div>
           )}
 
-          {/* System Overview */}
+          {/* System Overview Narrative */}
           {project.demoDescription && (
             <div className="bg-gray-950/60 border-l-4 border-blue-500 border-y border-r border-gray-800/80 p-5 rounded-r-xl space-y-2">
               <h4 className="text-xs uppercase font-bold text-gray-400 tracking-wider">
@@ -84,9 +82,10 @@ export function DemoModal({ project, onClose }: DemoModalProps) {
               </h4>
               <div className="flex flex-col gap-6 w-full">
                 {imagesToShow.map((img, idx) => {
-                  const finalSrc = img.startsWith("http")
+                  // Si es URL externa (http), la deja igual. Si es interna, remueve la barra inicial "/"
+                  const src = img.startsWith("http")
                     ? img
-                    : `${basePath}${img.startsWith("/") ? img : `/${img}`}`;
+                    : img.replace(/^\//, "");
 
                   return (
                     <div
@@ -94,7 +93,7 @@ export function DemoModal({ project, onClose }: DemoModalProps) {
                       className="relative rounded-xl overflow-hidden border border-gray-800 bg-gray-950 p-2 shadow-xl"
                     >
                       <img
-                        src={finalSrc}
+                        src={src}
                         alt={`Preview ${idx + 1} - ${project.title}`}
                         className="w-full h-auto object-contain rounded-lg"
                       />
