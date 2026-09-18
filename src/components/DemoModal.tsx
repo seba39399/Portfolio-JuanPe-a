@@ -1,22 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { Project } from "@/types/project";
 
 interface DemoModalProps {
   project: Project | null;
   onClose: () => void;
 }
-
-// Helper para construir la ruta correcta respetando el basePath
-const getImagePath = (path: string) => {
-  if (path.startsWith("http")) return path;
-
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "/Portfolio-JuanPe-a";
-  const cleanPath = path.startsWith("/") ? path : `/${path}`;
-
-  return `${basePath}${cleanPath}`;
-};
 
 export function DemoModal({ project, onClose }: DemoModalProps) {
   if (!project) return null;
@@ -27,6 +16,8 @@ export function DemoModal({ project, onClose }: DemoModalProps) {
       : project.imageUrl
         ? [project.imageUrl]
         : [];
+
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
   return (
     <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-2 sm:p-6">
@@ -92,21 +83,24 @@ export function DemoModal({ project, onClose }: DemoModalProps) {
                 Interface & Image Previews
               </h4>
               <div className="flex flex-col gap-6 w-full">
-                {imagesToShow.map((img, idx) => (
-                  <div
-                    key={idx}
-                    className="relative rounded-xl overflow-hidden border border-gray-800 bg-gray-950 p-2 shadow-xl"
-                  >
-                    <Image
-                      src={getImagePath(img)}
-                      alt={`Preview ${idx + 1} - ${project.title}`}
-                      width={1200}
-                      height={675}
-                      unoptimized
-                      className="w-full h-auto object-contain rounded-lg"
-                    />
-                  </div>
-                ))}
+                {imagesToShow.map((img, idx) => {
+                  const finalSrc = img.startsWith("http")
+                    ? img
+                    : `${basePath}${img.startsWith("/") ? img : `/${img}`}`;
+
+                  return (
+                    <div
+                      key={idx}
+                      className="relative rounded-xl overflow-hidden border border-gray-800 bg-gray-950 p-2 shadow-xl"
+                    >
+                      <img
+                        src={finalSrc}
+                        alt={`Preview ${idx + 1} - ${project.title}`}
+                        className="w-full h-auto object-contain rounded-lg"
+                      />
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ) : (project.demoType === "iframe" ||

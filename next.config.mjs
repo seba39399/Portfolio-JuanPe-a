@@ -5,6 +5,9 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: "/Portfolio-JuanPe-a",
+  env: {
+    NEXT_PUBLIC_BASE_PATH: "/Portfolio-JuanPe-a",
+  },
 };
 
 export default nextConfig;
