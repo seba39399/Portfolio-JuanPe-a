@@ -8,6 +8,16 @@ interface DemoModalProps {
   onClose: () => void;
 }
 
+// Helper para construir la ruta correcta respetando el basePath
+const getImagePath = (path: string) => {
+  if (path.startsWith("http")) return path;
+
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "/Portfolio-JuanPe-a";
+  const cleanPath = path.startsWith("/") ? path : `/${path}`;
+
+  return `${basePath}${cleanPath}`;
+};
+
 export function DemoModal({ project, onClose }: DemoModalProps) {
   if (!project) return null;
 
@@ -20,7 +30,6 @@ export function DemoModal({ project, onClose }: DemoModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-2 sm:p-6">
-      {/* Contenedor amplio max-w-7xl para máxima visibilidad */}
       <div className="bg-gray-900 border border-gray-800 rounded-2xl w-full max-w-7xl overflow-hidden shadow-2xl flex flex-col max-h-[95vh]">
         {/* Header Modal */}
         <div className="p-4 sm:p-5 border-b border-gray-800 flex justify-between items-center bg-gray-950 shrink-0">
@@ -40,9 +49,9 @@ export function DemoModal({ project, onClose }: DemoModalProps) {
           </button>
         </div>
 
-        {/* Modal Body - Scrollable */}
+        {/* Modal Body */}
         <div className="p-4 sm:p-8 bg-black overflow-y-auto flex-1 space-y-8">
-          {/* 1. KPIs Section */}
+          {/* KPIs Section */}
           {project.metrics && project.metrics.length > 0 && (
             <div className="space-y-3">
               <h4 className="text-xs uppercase font-bold text-blue-400 tracking-wider flex items-center gap-2">
@@ -64,7 +73,7 @@ export function DemoModal({ project, onClose }: DemoModalProps) {
             </div>
           )}
 
-          {/* 2. System Overview & Architecture Narrative */}
+          {/* System Overview */}
           {project.demoDescription && (
             <div className="bg-gray-950/60 border-l-4 border-blue-500 border-y border-r border-gray-800/80 p-5 rounded-r-xl space-y-2">
               <h4 className="text-xs uppercase font-bold text-gray-400 tracking-wider">
@@ -76,7 +85,7 @@ export function DemoModal({ project, onClose }: DemoModalProps) {
             </div>
           )}
 
-          {/* 3. Media Preview Section (Diferencia dinámicamente entre Imagen o Video/Iframe) */}
+          {/* Media Preview Section */}
           {project.demoType === "image" && imagesToShow.length > 0 ? (
             <div className="space-y-4">
               <h4 className="text-xs uppercase font-bold text-gray-400 tracking-wider">
@@ -89,10 +98,11 @@ export function DemoModal({ project, onClose }: DemoModalProps) {
                     className="relative rounded-xl overflow-hidden border border-gray-800 bg-gray-950 p-2 shadow-xl"
                   >
                     <Image
-                      src={img}
+                      src={getImagePath(img)}
                       alt={`Preview ${idx + 1} - ${project.title}`}
                       width={1200}
                       height={675}
+                      unoptimized
                       className="w-full h-auto object-contain rounded-lg"
                     />
                   </div>
@@ -119,7 +129,7 @@ export function DemoModal({ project, onClose }: DemoModalProps) {
             </div>
           ) : null}
 
-          {/* 4. Complemento General Técnico (Aplica para todos los proyectos) */}
+          {/* Key Deliverables */}
           <div className="bg-gray-950 p-5 rounded-xl border border-gray-800/80 space-y-3">
             <h4 className="text-xs uppercase font-bold text-gray-400 tracking-wider">
               Key Technical Deliverables & Execution Details
@@ -160,7 +170,7 @@ export function DemoModal({ project, onClose }: DemoModalProps) {
             </div>
           </div>
 
-          {/* 5. Footer CTA a GitHub */}
+          {/* Footer CTA */}
           {project.githubUrl && (
             <div className="pt-4 border-t border-gray-800 flex justify-end">
               <a

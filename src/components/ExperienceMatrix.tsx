@@ -108,7 +108,7 @@ const experiences: Experience[] = [
     period: "2023 - 2024",
     location: "Cali, Colombia",
     summary:
-      "Development of computational algorithms for the digital processing of medical images in a radiological context—working with X-rays or computed tomography scans—to improve workflows in dental practices, general dentistry, and orthodontic procedures. Application of advanced computer vision utilizing machine learning, deep learning, and both manual and automated mathematical methods.",
+      "Development of computational algorithms for the digital processing of medical images in radiological context—working with X-rays or computed tomography scans—to improve workflows in dental practices, general dentistry, and orthodontic procedures. Application of advanced computer vision utilizing machine learning, deep learning, and both manual and automated mathematical methods.",
     keyDeliverables: [
       "Engineered Deep Learning pipelines (CNNs and Transformers) for automated landmark detection and structure segmentation on dental X-rays and CT scans.",
       "Developed mathematical image-processing models for automatic landmarking (e.g., Ricketts E-Line detection), significantly reducing diagnostic time for orthodontists.",

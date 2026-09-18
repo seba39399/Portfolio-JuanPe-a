@@ -459,6 +459,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$imag
 "use client";
 ;
 ;
+// Helper para construir la ruta correcta respetando el basePath
+const getImagePath = (path)=>{
+    if (path.startsWith("http")) return path;
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "/Portfolio-JuanPe-a";
+    const cleanPath = path.startsWith("/") ? path : `/${path}`;
+    return `${basePath}${cleanPath}`;
+};
 function DemoModal({ project, onClose }) {
     if (!project) return null;
     const imagesToShow = project.demoImages && project.demoImages.length > 0 ? project.demoImages : project.imageUrl ? [
@@ -479,7 +486,7 @@ function DemoModal({ project, onClose }) {
                                     children: project.category
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                    lineNumber: 28,
+                                    lineNumber: 37,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -487,13 +494,13 @@ function DemoModal({ project, onClose }) {
                                     children: project.title
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                    lineNumber: 31,
+                                    lineNumber: 40,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/DemoModal.tsx",
-                            lineNumber: 27,
+                            lineNumber: 36,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -502,13 +509,13 @@ function DemoModal({ project, onClose }) {
                             children: "✕ Close"
                         }, void 0, false, {
                             fileName: "[project]/src/components/DemoModal.tsx",
-                            lineNumber: 35,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/DemoModal.tsx",
-                    lineNumber: 26,
+                    lineNumber: 35,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -524,14 +531,14 @@ function DemoModal({ project, onClose }) {
                                             className: "w-2 h-2 rounded-full bg-blue-500"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/DemoModal.tsx",
-                                            lineNumber: 49,
+                                            lineNumber: 58,
                                             columnNumber: 17
                                         }, this),
                                         "Key Performance Indicators (KPIs)"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                    lineNumber: 48,
+                                    lineNumber: 57,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -543,23 +550,23 @@ function DemoModal({ project, onClose }) {
                                                 children: metric
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/DemoModal.tsx",
-                                                lineNumber: 58,
+                                                lineNumber: 67,
                                                 columnNumber: 21
                                             }, this)
                                         }, idx, false, {
                                             fileName: "[project]/src/components/DemoModal.tsx",
-                                            lineNumber: 54,
+                                            lineNumber: 63,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                    lineNumber: 52,
+                                    lineNumber: 61,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/DemoModal.tsx",
-                            lineNumber: 47,
+                            lineNumber: 56,
                             columnNumber: 13
                         }, this),
                         project.demoDescription && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -570,7 +577,7 @@ function DemoModal({ project, onClose }) {
                                     children: "System Overview & Architecture Narrative"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                    lineNumber: 70,
+                                    lineNumber: 79,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -578,13 +585,13 @@ function DemoModal({ project, onClose }) {
                                     children: project.demoDescription
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                    lineNumber: 73,
+                                    lineNumber: 82,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/DemoModal.tsx",
-                            lineNumber: 69,
+                            lineNumber: 78,
                             columnNumber: 13
                         }, this),
                         project.demoType === "image" && imagesToShow.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -595,7 +602,7 @@ function DemoModal({ project, onClose }) {
                                     children: "Interface & Image Previews"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                    lineNumber: 82,
+                                    lineNumber: 91,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -603,30 +610,31 @@ function DemoModal({ project, onClose }) {
                                     children: imagesToShow.map((img, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "relative rounded-xl overflow-hidden border border-gray-800 bg-gray-950 p-2 shadow-xl",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                src: img,
+                                                src: getImagePath(img),
                                                 alt: `Preview ${idx + 1} - ${project.title}`,
                                                 width: 1200,
                                                 height: 675,
+                                                unoptimized: true,
                                                 className: "w-full h-auto object-contain rounded-lg"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/DemoModal.tsx",
-                                                lineNumber: 91,
+                                                lineNumber: 100,
                                                 columnNumber: 21
                                             }, this)
                                         }, idx, false, {
                                             fileName: "[project]/src/components/DemoModal.tsx",
-                                            lineNumber: 87,
+                                            lineNumber: 96,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                    lineNumber: 85,
+                                    lineNumber: 94,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/DemoModal.tsx",
-                            lineNumber: 81,
+                            lineNumber: 90,
                             columnNumber: 13
                         }, this) : (project.demoType === "iframe" || project.demoType === "video" || project.demoType === "interactive") && project.demoUrl ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "space-y-4",
@@ -636,7 +644,7 @@ function DemoModal({ project, onClose }) {
                                     children: "Interface & Video Interactive Preview"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 117,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -649,18 +657,18 @@ function DemoModal({ project, onClose }) {
                                         allowFullScreen: true
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/DemoModal.tsx",
-                                        lineNumber: 111,
+                                        lineNumber: 121,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                    lineNumber: 110,
+                                    lineNumber: 120,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/DemoModal.tsx",
-                            lineNumber: 106,
+                            lineNumber: 116,
                             columnNumber: 13
                         }, this) : null,
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -671,7 +679,7 @@ function DemoModal({ project, onClose }) {
                                     children: "Key Technical Deliverables & Execution Details"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                    lineNumber: 124,
+                                    lineNumber: 134,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -685,7 +693,7 @@ function DemoModal({ project, onClose }) {
                                                     children: "✓"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                                    lineNumber: 129,
+                                                    lineNumber: 139,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -695,7 +703,7 @@ function DemoModal({ project, onClose }) {
                                                             children: "Modular Architecture:"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/DemoModal.tsx",
-                                                            lineNumber: 131,
+                                                            lineNumber: 141,
                                                             columnNumber: 19
                                                         }, this),
                                                         " ",
@@ -703,13 +711,13 @@ function DemoModal({ project, onClose }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                                    lineNumber: 130,
+                                                    lineNumber: 140,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/DemoModal.tsx",
-                                            lineNumber: 128,
+                                            lineNumber: 138,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -720,7 +728,7 @@ function DemoModal({ project, onClose }) {
                                                     children: "✓"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                                    lineNumber: 137,
+                                                    lineNumber: 147,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -730,7 +738,7 @@ function DemoModal({ project, onClose }) {
                                                             children: "Production Readiness:"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/DemoModal.tsx",
-                                                            lineNumber: 139,
+                                                            lineNumber: 149,
                                                             columnNumber: 19
                                                         }, this),
                                                         " ",
@@ -738,13 +746,13 @@ function DemoModal({ project, onClose }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                                    lineNumber: 138,
+                                                    lineNumber: 148,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/DemoModal.tsx",
-                                            lineNumber: 136,
+                                            lineNumber: 146,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -755,7 +763,7 @@ function DemoModal({ project, onClose }) {
                                                     children: "✓"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                                    lineNumber: 145,
+                                                    lineNumber: 155,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -765,7 +773,7 @@ function DemoModal({ project, onClose }) {
                                                             children: "Tech Stack Alignment:"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/DemoModal.tsx",
-                                                            lineNumber: 147,
+                                                            lineNumber: 157,
                                                             columnNumber: 19
                                                         }, this),
                                                         " ",
@@ -775,13 +783,13 @@ function DemoModal({ project, onClose }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                                    lineNumber: 146,
+                                                    lineNumber: 156,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/DemoModal.tsx",
-                                            lineNumber: 144,
+                                            lineNumber: 154,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -792,7 +800,7 @@ function DemoModal({ project, onClose }) {
                                                     children: "✓"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                                    lineNumber: 153,
+                                                    lineNumber: 163,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -802,7 +810,7 @@ function DemoModal({ project, onClose }) {
                                                             children: "Source Verification:"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/DemoModal.tsx",
-                                                            lineNumber: 155,
+                                                            lineNumber: 165,
                                                             columnNumber: 19
                                                         }, this),
                                                         " ",
@@ -810,25 +818,25 @@ function DemoModal({ project, onClose }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                                    lineNumber: 154,
+                                                    lineNumber: 164,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/DemoModal.tsx",
-                                            lineNumber: 152,
+                                            lineNumber: 162,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/DemoModal.tsx",
-                                    lineNumber: 127,
+                                    lineNumber: 137,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/DemoModal.tsx",
-                            lineNumber: 123,
+                            lineNumber: 133,
                             columnNumber: 11
                         }, this),
                         project.githubUrl && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -841,29 +849,29 @@ function DemoModal({ project, onClose }) {
                                 children: "View Repository on GitHub 🚀"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/DemoModal.tsx",
-                                lineNumber: 166,
+                                lineNumber: 176,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/DemoModal.tsx",
-                            lineNumber: 165,
+                            lineNumber: 175,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/DemoModal.tsx",
-                    lineNumber: 44,
+                    lineNumber: 53,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/DemoModal.tsx",
-            lineNumber: 24,
+            lineNumber: 33,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/DemoModal.tsx",
-        lineNumber: 22,
+        lineNumber: 32,
         columnNumber: 5
     }, this);
 }
@@ -969,7 +977,7 @@ const experiences = [
         type: "Academic",
         period: "2023 - 2024",
         location: "Cali, Colombia",
-        summary: "Development of computational algorithms for the digital processing of medical images in a radiological context—working with X-rays or computed tomography scans—to improve workflows in dental practices, general dentistry, and orthodontic procedures. Application of advanced computer vision utilizing machine learning, deep learning, and both manual and automated mathematical methods.",
+        summary: "Development of computational algorithms for the digital processing of medical images in radiological context—working with X-rays or computed tomography scans—to improve workflows in dental practices, general dentistry, and orthodontic procedures. Application of advanced computer vision utilizing machine learning, deep learning, and both manual and automated mathematical methods.",
         keyDeliverables: [
             "Engineered Deep Learning pipelines (CNNs and Transformers) for automated landmark detection and structure segmentation on dental X-rays and CT scans.",
             "Developed mathematical image-processing models for automatic landmarking (e.g., Ricketts E-Line detection), significantly reducing diagnostic time for orthodontists.",
