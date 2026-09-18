@@ -2409,11 +2409,11 @@ const projectsData = [
             "100% Automated CI/CD"
         ],
         demoType: "image",
-        demoUrl: "/images/interfaz1.jpg",
-        imageUrl: "/images/interfaz1.jpg",
+        demoUrl: "/Portfolio-JuanPe-a/images/interfaz1.jpg",
+        imageUrl: "/Portfolio-JuanPe-a/images/interfaz1.jpg",
         demoImages: [
-            "/images/interfaz1.jpg",
-            "/images/interfaz2.jpeg"
+            "/Portfolio-JuanPe-a/images/interfaz1.jpg",
+            "/Portfolio-JuanPe-a/images/interfaz2.jpeg"
         ],
         demoDescription: "This system addresses upper-limb rehabilitation monitoring by decoupling the computer vision pipeline from the UI using gRPC protocol buffers. The backend processes incoming frames via PekingU RT-DETR (Person Detection) and ViTPose-plus to extract 17 keypoint vectors. The client application tracks left-arm angular extension for automatic repetition counting, clinical progress scoring, and PDF report generation without locking the Streamlit UI thread.",
         githubUrl: "https://github.com/miguelfrancor01/App_PhysicalRecovery"
